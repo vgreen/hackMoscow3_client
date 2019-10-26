@@ -3,6 +3,7 @@ import {View} from "react-native";
 import {style} from './OrderCard.styles'
 import {Avatar, Text} from "react-native-ui-kitten";
 import {ICard} from "../../../constants";
+import StatusOrderBar from "../StatusBar";
 
 export interface IProps extends ICard{
 }
@@ -22,7 +23,7 @@ class OrderCard extends React.Component<IProps, State> {
                 <View style={style.Description}>
                     <Text style={style.Name}> {name}</Text>
                     <View style={style.StatusBar}>
-
+                        <StatusOrderBar status={status}/>
                     </View>
                     <Text style={style.Date}>{order_date}</Text>
                 </View>
