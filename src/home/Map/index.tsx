@@ -1,30 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { View } from'react-native';
-import { WebView } from 'react-native-webview';
-import { Button, Layout, Spinner } from 'react-native-ui-kitten';
-import useStoreon from 'storeon/react';
-import { IState, IStateEvents } from '../../store'
+import React, {useRef, useState} from 'react';
+import {View} from 'react-native';
+import {WebView} from 'react-native-webview';
+import {Layout, Spinner} from 'react-native-ui-kitten';
+import {viewHeight} from "../../../constants";
 
 const { mapInitLogicString, createMapRouteLogicString } = require('./logic');
 
 const MapView: React.FC = () => {
     const webViewRef = useRef<WebView | null>(null),
-        [ isMapLoading, setIsMapLoading ] = useState(true),
-        { dispatch, activeOrderId, orders } = useStoreon<IState, IStateEvents>("activeOrderId", "orders");
+        [ isMapLoading, setIsMapLoading ] = useState(true)
 
-    useEffect(() => {
-        if(activeOrderId !== null && webViewRef.current) {
-            const { start, finish } = orders.find(({ id }) => id === activeOrderId)!;
-            webViewRef.current.injectJavaScript(createMapRouteLogicString([ start, finish ]))
-        }
-    }, [ activeOrderId ])
-
-    const handleResetClick = () => {
-        if(webViewRef.current) {
-            webViewRef.current.injectJavaScript(createMapRouteLogicString([]));
-            dispatch("orders/select", null);
-        }
-    }
 
     const html = `
         <html>
@@ -40,13 +25,11 @@ const MapView: React.FC = () => {
     `;
 
     return (
-	    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center', paddingTop: 20}}>    
-            <Button onPress={handleResetClick}>Сбросить маршрут</Button>
-
+	    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center', paddingTop: 20}}>
             { isMapLoading &&
                 <Spinner />
             }
-            <View style={{ flex: 1, height: "100%", width: "100%" }}>
+            <View style={{ ...viewHeight, width: "100%" }}>
                 <WebView
                     ref={webViewRef}
                     source={{ html }}

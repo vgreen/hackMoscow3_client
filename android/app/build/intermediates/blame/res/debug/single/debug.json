@@ -580,6 +580,10 @@
         "source": "/home/furazer/.gradle/caches/transforms-2/files-2.1/c0174ba09057128a8dd2cce98b2291b5/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/furazer/Рабочий стол/hackMoscow3_client/android/app/build/intermediates/res/merged/debug/xml_file_provider_paths.xml.flat",
+        "source": "/home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/packaged_res/debug/xml/file_provider_paths.xml"
+    },
+    {
         "merged": "/home/furazer/Рабочий стол/hackMoscow3_client/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/furazer/.gradle/caches/transforms-2/files-2.1/c0174ba09057128a8dd2cce98b2291b5/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },

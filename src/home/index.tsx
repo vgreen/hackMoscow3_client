@@ -1,34 +1,37 @@
 import * as React from 'react';
 import OrderPage from "./OrderPage";
-import {mapping, light as lightTheme} from '@eva-design/eva';
-import {ApplicationProvider, BottomNavigation, BottomNavigationTab} from 'react-native-ui-kitten'
-import {useState} from "react";
-import {View} from "react-native";
+import {light as lightTheme, mapping} from '@eva-design/eva';
+import {ApplicationProvider, BottomNavigation, BottomNavigationTab, IconRegistry} from 'react-native-ui-kitten'
 import MapView from "./Map";
+import useStoreon from "storeon/react";
+import {View} from "react-native";
+import {EvaIconsPack} from "@ui-kitten/eva-icons";
+import {BottomNav} from "../components/BottomNavigation";
+import {viewHeight} from "../../constants";
 
 interface IProps {
 }
 
-export const Home = (props: IProps) => {
-  const [page, setPage] = useState('order');
+const pages = [<OrderPage/>,<MapView/>];
 
-  return (
-      <ApplicationProvider mapping={mapping} theme={lightTheme}>
-          <View style={{height:'93%'}}>
-          {
-              page === 'order' ? <OrderPage/> : <MapView />
-          }
-          </View>
-          <BottomNavigation style={{height: '7%', marginBottom: 0}}>
-              <BottomNavigationTab
-                  title='DASHBOARD'
-              />
-              <BottomNavigationTab
-                  title='SETTINGS'
-              />
-          </BottomNavigation>
-      </ApplicationProvider>
-  )
+export const Home = (props: IProps) => {
+    const {dispatch, viewPagerIndex} = useStoreon('viewPagerIndex');
+
+    const handleMenuChange = (selectedIndex: number) => {
+        dispatch('switchPage', selectedIndex)
+    };
+
+    return (
+        <>
+            <IconRegistry icons={EvaIconsPack} />
+            <ApplicationProvider mapping={mapping} theme={lightTheme}>
+                <View style={{...viewHeight}}>
+                    {pages[viewPagerIndex]}
+                </View>
+                <BottomNav handleMenuChange={handleMenuChange}/>
+            </ApplicationProvider>
+        </>
+    )
 };
 
 

@@ -1,11 +1,10 @@
 // @ts-ignore
 import createStore from 'storeon';
 
-import ordersModule, { IOrdersState, IOrdersEvents } from './orders';
-import uiModule, { IUIState, IUIEvents } from './ui';
+import uiReducer, { IUIState, IUIEvents } from './ui.reducer';
+import orderReducer, {IOrderState ,IOrderEvents} from "./orderInfo.reducer";
 
-export type IState = IOrdersState & IUIState;
+export type TUnionState = IUIState & IOrderState;
+export type TUnionEvent = IUIEvents & IOrderEvents;
 
-export type IStateEvents = IOrdersEvents & IUIEvents;
-
-export default createStore<IState, IStateEvents>([ordersModule, uiModule]);
+export default createStore<TUnionState, TUnionEvent>([uiReducer, orderReducer]);

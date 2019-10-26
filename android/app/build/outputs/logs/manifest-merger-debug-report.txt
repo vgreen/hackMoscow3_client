@@ -6,6 +6,7 @@ INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/a
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /home/furazer/.gradle/caches/transforms-2/files-2.1/e97fe800dc3343aec99e14131444098d/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/c0174ba09057128a8dd2cce98b2291b5/AndroidManifest.xml:17:1-22:12
@@ -71,6 +72,8 @@ application
 ADDED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:6:5-24:19
 MERGED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:6:5-24:19
 MERGED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] /home/furazer/.gradle/caches/transforms-2/files-2.1/7a78d105cbe3afec7009a3f4d46c5b2a/AndroidManifest.xml:11:5-20
@@ -135,6 +138,8 @@ INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/a
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /home/furazer/.gradle/caches/transforms-2/files-2.1/e97fe800dc3343aec99e14131444098d/AndroidManifest.xml:7:5-9:41
@@ -221,3 +226,19 @@ uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
 		ADDED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/debug/AndroidManifest.xml:5:22-75
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
