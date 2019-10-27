@@ -2,7 +2,6 @@ import * as React from "react";
 import {View} from "react-native";
 import OrderCard from "../../components/OrderCard";
 import {ICard} from "../../../constants";
-
 const mockOrders = [
     {
         name: 'Утюг',

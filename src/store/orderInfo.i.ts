@@ -3,7 +3,7 @@ export interface IActor {
     "id": number,
     "name": string,
     "surname": string,
-    "homeAddress"?: string,
+    "homeAddress"?: string | null,
     "rating": number,
     "numberOfMarks"?: number
 }
@@ -24,6 +24,6 @@ export interface IOrder {
     "deliveryDate": null,
     "fromLocation": ILocation,
     "toLocation": ILocation,
-    "goodsDescription": Partial<string>,
-    "review": Partial<string>
+    "goodsDescription": string | null;,
+    "review": string | null
 }
