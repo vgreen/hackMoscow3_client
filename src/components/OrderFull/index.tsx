@@ -3,11 +3,12 @@ import {View} from "react-native";
 import TopNav from "../TopNavigation";
 import useStoreon from "storeon/react";
 import {style} from "./OrderFull.style";
-import {Avatar, Text} from "react-native-ui-kitten";
+import {Avatar, Button, Text} from "react-native-ui-kitten";
 import StatusOrderBar from "../StatusBar";
 import {IOrder} from "../../store/orderInfo.i";
 import {checkNullableString} from "../../../constants";
 import {getAvatar} from "../../images";
+import MapView from "../../home/Map";
 
 interface IProps {
     order: IOrder
@@ -37,6 +38,11 @@ export const OrderFull = ({order}: IProps) => {
             <Text style={style.text}>{'Описание: ' + order.goodsDescription}</Text>
             <Text style={style.text}>{'Заказчик: ' + order.customer.name + ' ' + order.customer.surname}</Text>
             <Text style={style.text}>{'Дата регистрации заказа: ' + order.registrationDate}</Text>
+            <Text style={style.text}>Маршрут курьера</Text>
+            <View style={{height: 300, marginTop: 20}}>
+                <MapView />
+            </View>
+
 
 
         </View>

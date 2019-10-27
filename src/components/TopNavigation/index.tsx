@@ -27,7 +27,7 @@ const TopNav = ({ onClick }:IProps) => {
         <TopNavigation
 
             leftControl={BackAction}
-            title='Application Title'
+            title='Назад'
         />
     );
 }
