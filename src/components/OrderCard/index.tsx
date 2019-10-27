@@ -6,6 +6,7 @@ import {checkNullableString} from "../../../constants";
 import StatusOrderBar from "../StatusBar";
 import useStoreon from "storeon/react";
 import {IOrder} from "../../store/orderInfo.i";
+import {getAvatar} from "../../images";
 
 export interface IProps {
     data: IOrder
@@ -35,7 +36,7 @@ const OrderCard = ({data}: IProps) => {
             <View style={style.CardWrapper}>
                 <View style={style.PicHolder}>
                     <Avatar style={style.Avatar}
-                            source={{uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'}}/>
+                            source={getAvatar(data.id)}/>
                 </View>
                 <View style={style.Description}>
                     <Text style={style.Name}> {data.name}</Text>

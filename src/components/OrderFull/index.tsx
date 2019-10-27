@@ -7,6 +7,7 @@ import {Avatar, Text} from "react-native-ui-kitten";
 import StatusOrderBar from "../StatusBar";
 import {IOrder} from "../../store/orderInfo.i";
 import {checkNullableString} from "../../../constants";
+import {getAvatar} from "../../images";
 
 interface IProps {
     order: IOrder
@@ -22,7 +23,7 @@ export const OrderFull = ({order}: IProps) => {
             <View style={style.CardWrapper}>
                 <View style={style.PicHolder}>
                     <Avatar style={style.Avatar}
-                            source={{uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'}}/>
+                            source={getAvatar(order.id)}/>
                 </View>
                 <View style={style.Description}>
                     <Text style={style.Name}> {order.name}</Text>
@@ -35,8 +36,7 @@ export const OrderFull = ({order}: IProps) => {
             <Text style={style.text}>{'Цена: ' + order.price}</Text>
             <Text style={style.text}>{'Описание: ' + order.goodsDescription}</Text>
             <Text style={style.text}>{'Заказчик: ' + order.customer.name + ' ' + order.customer.surname}</Text>
-            <Text style={style.text}>{'Курьер: ' + order.price}</Text>
-            <Text style={style.text}>{'Дата регистрации заказа: ' + order.price}</Text>
+            <Text style={style.text}>{'Дата регистрации заказа: ' + order.registrationDate}</Text>
 
 
         </View>
