@@ -14,16 +14,18 @@ export interface ILocation{
 }
 
 export interface IOrder {
+    "name": string,
     "id": number,
     "customer": IActor,
     "courier": IActor,
-    "orderStatus": "REGISTERED",
-    "registrationDate": "26.10.2019 11:11",
+    "orderStatus": string,
+    "registrationDate": string,
     "assigningDate": null,
     "pickUpDate": null,
     "deliveryDate": null,
     "fromLocation": ILocation,
     "toLocation": ILocation,
-    "goodsDescription": string | null;,
-    "review": string | null
+    "goodsDescription": string | null,
+    "review": string | null,
+    price: number
 }

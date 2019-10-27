@@ -8,6 +8,7 @@ import {View} from "react-native";
 import {EvaIconsPack} from "@ui-kitten/eva-icons";
 import {BottomNav} from "../components/BottomNavigation";
 import {viewHeight} from "../../constants";
+import {useEffect} from "react";
 
 interface IProps {
 }
@@ -16,10 +17,20 @@ const pages = [<OrderPage/>,<MapView/>];
 
 export const Home = (props: IProps) => {
     const {dispatch, viewPagerIndex} = useStoreon('viewPagerIndex');
-
     const handleMenuChange = (selectedIndex: number) => {
         dispatch('switchPage', selectedIndex)
     };
+
+    useEffect(() => {
+        getOrders();
+    }, []);
+
+    async function getOrders(){
+        let result = await fetch('http://ruavuai-zos6.localhost.run/api/customer/1/orders');
+        let orders = await result.json();
+        console.log(orders);
+        dispatch('setOrders', orders)
+    }
 
     return (
         <>

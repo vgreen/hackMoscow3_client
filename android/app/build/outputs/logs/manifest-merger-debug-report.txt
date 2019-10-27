@@ -5,6 +5,7 @@ INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/a
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-svg] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.61.2] /home/furazer/.gradle/caches/transforms-2/files-2.1/026452e5ad9d771284a4659773373942/AndroidManifest.xml:2:1-13:12
@@ -136,6 +137,8 @@ uses-sdk
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/furazer/Рабочий стол/hackMoscow3_client/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-svg] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-webview] /home/furazer/Рабочий стол/hackMoscow3_client/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41

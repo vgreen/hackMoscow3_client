@@ -1,18 +1,44 @@
 import * as React from 'react';
 import {View} from "react-native";
 import TopNav from "../TopNavigation";
-import * as useStoreon from "storeon/react";
+import useStoreon from "storeon/react";
+import {style} from "./OrderFull.style";
+import {Avatar, Text} from "react-native-ui-kitten";
+import StatusOrderBar from "../StatusBar";
+import {IOrder} from "../../store/orderInfo.i";
+import {checkNullableString} from "../../../constants";
 
 interface IProps {
+    order: IOrder
 }
 
-const OrderFull = (props:IProps) => {
+export const OrderFull = ({order}: IProps) => {
 
     const {dispatch, showFullOrder} = useStoreon('showFullOrder');
 
     return (
-        <View >
-            <TopNav onClick={dispatch('showFullOrder', false)}/>
+        <View style={[{width: showFullOrder ? '100%': '0%'},style.PageWrapper]}>
+            <TopNav onClick={() => {dispatch('showFullOrder', false)}}/>
+            <View style={style.CardWrapper}>
+                <View style={style.PicHolder}>
+                    <Avatar style={style.Avatar}
+                            source={{uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'}}/>
+                </View>
+                <View style={style.Description}>
+                    <Text style={style.Name}> {order.name}</Text>
+                    <View style={style.StatusBar}>
+                        <StatusOrderBar status={order.orderStatus}/>
+                    </View>
+                    <Text style={style.Date}>{checkNullableString(order.pickUpDate) }</Text>
+                </View>
+            </View>
+            <Text style={style.text}>{'Цена: ' + order.price}</Text>
+            <Text style={style.text}>{'Описание: ' + order.goodsDescription}</Text>
+            <Text style={style.text}>{'Заказчик: ' + order.customer.name + ' ' + order.customer.surname}</Text>
+            <Text style={style.text}>{'Курьер: ' + order.price}</Text>
+            <Text style={style.text}>{'Дата регистрации заказа: ' + order.price}</Text>
+
+
         </View>
     );
 };

@@ -24,7 +24,7 @@ const uiReducer: Module<IUIState, IUIEvents> = store => {
     store.on("@init", () => initUIState);
 
     store.on("switchPage", (_state, index) => ({ viewPagerIndex: index }));
-    store.on("showFullOrder", (_state, flag:boolean) => ({showFullOrder: flag}))
+    store.on("showFullOrder", (_state, flag) => ({showFullOrder: flag}))
 };
 
 export default uiReducer;

@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const mapStatusToBar = {
-    REGISTERED:{
+    "REGISTERED":{
         text: 'ЗАРЕГЕСТРИРОВАН',
         step: 1,
         style:{
@@ -42,6 +42,7 @@ type State = Readonly<{}>;
 
 class StatusOrderBar extends React.Component<IProps, State> {
 
+
     makeBarBalls(statusNum:number){
         let components = [];
         for(let i = 0; i < statusNum; i++){
@@ -55,12 +56,14 @@ class StatusOrderBar extends React.Component<IProps, State> {
 
     render() {
         const { status } = this.props;
+        console.log(status);
+        const {style, text, step} = mapStatusToBar[status];
         return (
             <View style={styleStatus.Wrapper}>
                 <View style={styleStatus.Bar}>
-                    {this.makeBarBalls(mapStatusToBar[status].step)}
+                    {this.makeBarBalls(step)}
                 </View>
-                <Text style={{...styleStatus.textStatus, ...mapStatusToBar[status].style}}>{mapStatusToBar[status].text} </Text>
+                <Text style={[styleStatus.textStatus, style]}>{text} </Text>
             </View>
         );
     }
